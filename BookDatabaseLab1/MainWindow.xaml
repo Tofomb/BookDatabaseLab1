@@ -1,0 +1,32 @@
+﻿<Window x:Name="MainFrame" x:Class="BookDatabaseLab1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BookDatabaseLab1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="581.667" Loaded="LoadMainFrame">
+    <Grid Margin="0,0,0.333,-0.333">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="193*"/>
+            <RowDefinition Height="128*"/>
+        </Grid.RowDefinitions>
+        <ListBox x:Name="AuthorListBox" HorizontalAlignment="Left" Height="200" Margin="140,57,0,0" VerticalAlignment="Top" Width="100" Grid.RowSpan="2" SelectionChanged="AuthorSelection"/>
+        <ListBox x:Name="BookListBox" HorizontalAlignment="Left" Height="200" Margin="317,57,0,0" VerticalAlignment="Top" Width="100" Grid.RowSpan="2" SelectionChanged="BookSelection"/>
+        <Label x:Name="AuthorLabel" Content="Authors" HorizontalAlignment="Left" Margin="140,26,0,0" VerticalAlignment="Top" Width="100" HorizontalContentAlignment="Center"/>
+        <Label x:Name="BookLabel" Content="Books" HorizontalAlignment="Left" Margin="317,26,0,0" VerticalAlignment="Top" Width="100" HorizontalContentAlignment="Center"/>
+        <TextBox x:Name="NameTextBlock" HorizontalAlignment="Left" Margin="24,74,0,0" TextWrapping="Wrap" Text="Name" VerticalAlignment="Top" Width="111" GotFocus="NameTextBlockFocus"/>
+        <TextBox x:Name="BirthDateTextBlock" HorizontalAlignment="Left" Margin="24,144,0,0" TextWrapping="Wrap" Text="Birth Date" VerticalAlignment="Top" Width="111" GotFocus="BirthDateTextBlockFocus"/>
+        <TextBox x:Name="CountryTextBlock" HorizontalAlignment="Left" Margin="24,17.333,0,0" TextWrapping="Wrap" Text="Country" VerticalAlignment="Top" Width="111" Grid.Row="1" GotFocus="CountryTextBlockFocus"/>
+        <TextBox x:Name="WordCountTextBlock" HorizontalAlignment="Left" Margin="422,21.333,0,0" TextWrapping="Wrap" Text="Word Count" VerticalAlignment="Top" Width="111" Grid.Row="1" GotFocus="WordCountTextBlockFocus"/>
+        <TextBox x:Name="ReleaseDateTextBlock" HorizontalAlignment="Left" Margin="422,147,0,0" TextWrapping="Wrap" Text="Realease Date" VerticalAlignment="Top" Width="111" GotFocus="RealeaseDateTextBlockFocus"/>
+        <TextBox x:Name="TitleTextBlock" HorizontalAlignment="Left" Margin="422,74,0,0" TextWrapping="Wrap" Text="Title" VerticalAlignment="Top" Width="111" GotFocus="TitleTextBlockFocus"/>
+        <Button x:Name="CreateAuthorButton" Content="Create" HorizontalAlignment="Left" Margin="24,72.333,0,0" Grid.Row="1" VerticalAlignment="Top" Width="70" Click="CreateAuthorButton_Click_1"/>
+        <Button x:Name="EditAuthorButton" Content="Edit" HorizontalAlignment="Left" Margin="100,72.333,0,0" Grid.Row="1" VerticalAlignment="Top" Width="70" Click="EditAuthorButton_Click" IsEnabled="False"/>
+        <Button x:Name="DeleteAuthorButton" Content="Delete" HorizontalAlignment="Left" Margin="175,72.333,0,0" Grid.Row="1" VerticalAlignment="Top" Width="70" Click="DeleteAuthorButton_Click" IsEnabled="False"/>
+        <Button x:Name="CreateBookButton" Content="Create" HorizontalAlignment="Left" Margin="313,72.333,0,0" Grid.Row="1" VerticalAlignment="Top" Width="70" Click="CreateBookButton_Click" IsEnabled="False"/>
+        <Button x:Name="EditBookButton" Content="Edit" HorizontalAlignment="Left" Margin="388,72.333,0,0" Grid.Row="1" VerticalAlignment="Top" Width="70" Click="EditBookButton_Click" IsEnabled="False"/>
+        <Button x:Name="DeleteBookButton" Content="Delete" HorizontalAlignment="Left" Margin="463,72.333,0,0" Grid.Row="1" VerticalAlignment="Top" Width="70" Click="DeleteBookButton_Click" IsEnabled="False"/>
+
+    </Grid>
+</Window>
